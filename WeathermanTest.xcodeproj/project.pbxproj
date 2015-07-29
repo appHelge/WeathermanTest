@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80E8C7D1B64DE8E000A3913 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C7C1B64DE8E000A3913 /* LocationsViewController.swift */; };
+		E80E8C7F1B653B88000A3913 /* LocationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C7E1B653B88000A3913 /* LocationSearch.swift */; };
+		E80E8C811B653BFF000A3913 /* LocationSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C801B653BFF000A3913 /* LocationSearchResult.swift */; };
+		E80E8C8A1B66AE79000A3913 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C851B66AE79000A3913 /* TFHpple.m */; };
+		E80E8C8B1B66AE79000A3913 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C871B66AE79000A3913 /* TFHppleElement.m */; };
+		E80E8C8C1B66AE79000A3913 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C891B66AE79000A3913 /* XPathQuery.m */; };
+		E80E8C901B66CC79000A3913 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E80E8C8F1B66CC79000A3913 /* libxml2.2.tbd */; };
+		E80E8C921B67BAC6000A3913 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E8C911B67BAC6000A3913 /* LoadingCell.xib */; };
+		E80E8C941B67BAE5000A3913 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E8C931B67BAE5000A3913 /* NothingFoundCell.xib */; };
+		E80E8C961B67BAFA000A3913 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80E8C951B67BAFA000A3913 /* SearchResultCell.xib */; };
+		E80E8C981B67BECB000A3913 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C971B67BECB000A3913 /* SearchResultCell.swift */; };
+		E80E8C9A1B681489000A3913 /* SearchResultArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80E8C991B681489000A3913 /* SearchResultArray.swift */; };
 		E85020031B637BA700D0CA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85020021B637BA700D0CA9A /* AppDelegate.swift */; };
 		E85020051B637BA700D0CA9A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85020041B637BA700D0CA9A /* FirstViewController.swift */; };
 		E85020071B637BA700D0CA9A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85020061B637BA700D0CA9A /* SecondViewController.swift */; };
@@ -35,6 +47,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E80E8C7C1B64DE8E000A3913 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		E80E8C7E1B653B88000A3913 /* LocationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearch.swift; sourceTree = "<group>"; };
+		E80E8C801B653BFF000A3913 /* LocationSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResult.swift; sourceTree = "<group>"; };
+		E80E8C831B66AE79000A3913 /* WeathermanTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeathermanTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		E80E8C841B66AE79000A3913 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		E80E8C851B66AE79000A3913 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		E80E8C861B66AE79000A3913 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		E80E8C871B66AE79000A3913 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		E80E8C881B66AE79000A3913 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		E80E8C891B66AE79000A3913 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		E80E8C8F1B66CC79000A3913 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		E80E8C911B67BAC6000A3913 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		E80E8C931B67BAE5000A3913 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		E80E8C951B67BAFA000A3913 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		E80E8C971B67BECB000A3913 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		E80E8C991B681489000A3913 /* SearchResultArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultArray.swift; sourceTree = "<group>"; };
 		E8501FFF1B637BA700D0CA9A /* WeathermanTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeathermanTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85020021B637BA700D0CA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E85020041B637BA700D0CA9A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80E8C901B66CC79000A3913 /* libxml2.2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +105,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80E8C821B66AE3D000A3913 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				E80E8C841B66AE79000A3913 /* TFHpple.h */,
+				E80E8C851B66AE79000A3913 /* TFHpple.m */,
+				E80E8C861B66AE79000A3913 /* TFHppleElement.h */,
+				E80E8C871B66AE79000A3913 /* TFHppleElement.m */,
+				E80E8C881B66AE79000A3913 /* XPathQuery.h */,
+				E80E8C891B66AE79000A3913 /* XPathQuery.m */,
+				E80E8C831B66AE79000A3913 /* WeathermanTest-Bridging-Header.h */,
+			);
+			name = hpple;
+			sourceTree = "<group>";
+		};
 		E8501FF61B637BA700D0CA9A = {
 			isa = PBXGroup;
 			children = (
+				E80E8C8F1B66CC79000A3913 /* libxml2.2.tbd */,
 				E85020011B637BA700D0CA9A /* WeathermanTest */,
 				E85020181B637BA700D0CA9A /* WeathermanTestTests */,
 				E85020231B637BA700D0CA9A /* WeathermanTestUITests */,
@@ -106,6 +150,15 @@
 				E850200B1B637BA700D0CA9A /* Assets.xcassets */,
 				E850200D1B637BA700D0CA9A /* LaunchScreen.storyboard */,
 				E85020101B637BA700D0CA9A /* Info.plist */,
+				E80E8C7C1B64DE8E000A3913 /* LocationsViewController.swift */,
+				E80E8C7E1B653B88000A3913 /* LocationSearch.swift */,
+				E80E8C801B653BFF000A3913 /* LocationSearchResult.swift */,
+				E80E8C991B681489000A3913 /* SearchResultArray.swift */,
+				E80E8C971B67BECB000A3913 /* SearchResultCell.swift */,
+				E80E8C951B67BAFA000A3913 /* SearchResultCell.xib */,
+				E80E8C931B67BAE5000A3913 /* NothingFoundCell.xib */,
+				E80E8C911B67BAC6000A3913 /* LoadingCell.xib */,
+				E80E8C821B66AE3D000A3913 /* hpple */,
 			);
 			path = WeathermanTest;
 			sourceTree = "<group>";
@@ -190,6 +243,7 @@
 		E8501FF71B637BA700D0CA9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Helge Larsen";
 				TargetAttributes = {
@@ -233,6 +287,9 @@
 			files = (
 				E850200F1B637BA700D0CA9A /* LaunchScreen.storyboard in Resources */,
 				E850200C1B637BA700D0CA9A /* Assets.xcassets in Resources */,
+				E80E8C921B67BAC6000A3913 /* LoadingCell.xib in Resources */,
+				E80E8C941B67BAE5000A3913 /* NothingFoundCell.xib in Resources */,
+				E80E8C961B67BAFA000A3913 /* SearchResultCell.xib in Resources */,
 				E850200A1B637BA700D0CA9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80E8C9A1B681489000A3913 /* SearchResultArray.swift in Sources */,
+				E80E8C8B1B66AE79000A3913 /* TFHppleElement.m in Sources */,
+				E80E8C7F1B653B88000A3913 /* LocationSearch.swift in Sources */,
+				E80E8C811B653BFF000A3913 /* LocationSearchResult.swift in Sources */,
 				E85020071B637BA700D0CA9A /* SecondViewController.swift in Sources */,
+				E80E8C981B67BECB000A3913 /* SearchResultCell.swift in Sources */,
+				E80E8C8C1B66AE79000A3913 /* XPathQuery.m in Sources */,
+				E80E8C8A1B66AE79000A3913 /* TFHpple.m in Sources */,
 				E85020031B637BA700D0CA9A /* AppDelegate.swift in Sources */,
 				E85020051B637BA700D0CA9A /* FirstViewController.swift in Sources */,
+				E80E8C7D1B64DE8E000A3913 /* LocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +465,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = WeathermanTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apphelge.WeathermanTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeathermanTest/WeathermanTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -411,10 +480,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = WeathermanTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apphelge.WeathermanTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeathermanTest/WeathermanTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -485,6 +557,7 @@
 				E850202B1B637BA700D0CA9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E850202C1B637BA700D0CA9A /* Build configuration list for PBXNativeTarget "WeathermanTestTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +566,7 @@
 				E850202E1B637BA700D0CA9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E850202F1B637BA700D0CA9A /* Build configuration list for PBXNativeTarget "WeathermanTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +575,7 @@
 				E85020311B637BA700D0CA9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
