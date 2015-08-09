@@ -27,6 +27,7 @@
 		E850200F1B637BA700D0CA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E850200D1B637BA700D0CA9A /* LaunchScreen.storyboard */; };
 		E850201A1B637BA700D0CA9A /* WeathermanTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85020191B637BA700D0CA9A /* WeathermanTestTests.swift */; };
 		E85020251B637BA700D0CA9A /* WeathermanTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85020241B637BA700D0CA9A /* WeathermanTestUITests.swift */; };
+		E8A1C5441B6D1A2100314914 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1C5431B6D1A2100314914 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E85020201B637BA700D0CA9A /* WeathermanTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeathermanTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85020241B637BA700D0CA9A /* WeathermanTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeathermanTestUITests.swift; sourceTree = "<group>"; };
 		E85020261B637BA700D0CA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A1C5431B6D1A2100314914 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				E80E8C951B67BAFA000A3913 /* SearchResultCell.xib */,
 				E80E8C931B67BAE5000A3913 /* NothingFoundCell.xib */,
 				E80E8C911B67BAC6000A3913 /* LoadingCell.xib */,
+				E8A1C5431B6D1A2100314914 /* Functions.swift */,
 				E80E8C821B66AE3D000A3913 /* hpple */,
 			);
 			path = WeathermanTest;
@@ -326,6 +329,7 @@
 				E85020031B637BA700D0CA9A /* AppDelegate.swift in Sources */,
 				E85020051B637BA700D0CA9A /* FirstViewController.swift in Sources */,
 				E80E8C7D1B64DE8E000A3913 /* LocationsViewController.swift in Sources */,
+				E8A1C5441B6D1A2100314914 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,7 +47,7 @@ class SearchResultCell: UITableViewCell {
   }
   
   func configureForSearchResult(searchResult: LocationSearchResult) {
-    titleLabel.text = searchResult.title
-    subtitleLabel.text = searchResult.subtitle
+    titleLabel.text = searchResult.placeName
+    subtitleLabel.text = "\(searchResult.type), \(searchResult.municipality), (\(searchResult.area)), \(searchResult.country)"
   }
 }

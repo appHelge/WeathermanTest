@@ -31,7 +31,10 @@ class LocationSearch {
       UIApplication.sharedApplication().networkActivityIndicatorVisible = true
       state = .Loading
       
-      let url = urlWithSearchText(text)
+      guard let url = urlWithSearchText(text) else {
+        return
+      }
+      
       let session = NSURLSession.sharedSession()
       dataTask = session.dataTaskWithURL(url, completionHandler: {
         data, response, error in
@@ -68,16 +71,17 @@ class LocationSearch {
     }
   }
   
-  private func urlWithSearchText(searchText: String) -> NSURL {
+  private func urlWithSearchText(searchText: String) -> NSURL? {
     //let locale = NSLocale.autoupdatingCurrentLocale()
     //let language = locale.localeIdentifier
     //let countryCode = locale.objectForKey(NSLocaleCountryCode) as! String
-    
-    let escapedSearchText = searchText.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-    let urlString = String(format: "http://www.yr.no/soek/soek.aspx?sted=%@", escapedSearchText)
-    let url = NSURL(string: urlString)
-    print("URL: \(url!)")
-    return url!
+    if let escapedSearchText = searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+      let urlString = String(format: "http://www.yr.no/soek/soek.aspx?sted=%@", escapedSearchText)
+      let url = NSURL(string: urlString)
+      print("URL: \(url!)")
+      return url!
+    }
+    return nil
   }
   
   private func parseHTML(data: NSData) -> [LocationSearchResult]? {
@@ -87,23 +91,43 @@ class LocationSearch {
     let resultTablesNodes = locationsParser.searchWithXPathQuery(resultTablesXpath)
     print("resultTableNodes count:\(resultTablesNodes.count)")
     var searchResults = [LocationSearchResult]()
+    var href: String = ""
     
     for resultTableElement in resultTablesNodes {
       let searchResult = LocationSearchResult()
       let locationDataList = resultTableElement.childrenWithTagName("td")
 
-      /*
       for locationDataItem in locationDataList {
+        let locationDataItemHref = locationDataItem.childrenWithTagName("a")
+        if locationDataItemHref.count > 0 {
+          href = String(locationDataItemHref[0].attributes["href"])
+          //print("href: \(href)")
+          searchResult.url = "http://www.yr.no\(href)"
+        }
         print(locationDataItem.content)
+        for (attribName, attribValue) in locationDataItem.attributes {
+          print("attrib: \(attribName): \(attribValue)")
+        }
       }
-      */
-      searchResult.placeName = locationDataList[1].content
-      searchResult.type = locationDataList[3].content
-      searchResult.municipality = locationDataList[4].content
-      searchResult.area = locationDataList[5].content
+      searchResult.resultListIndex = removeUnwantedCharactersFromText(locationDataList[0].content)
+      searchResult.placeName = removeUnwantedCharactersFromText(locationDataList[1].content)
+      searchResult.url = String(locationDataList[1].childrenWithTagName("a")[0].attributes["href"]!)
+      searchResult.elevation = removeUnwantedCharactersFromText(locationDataList[2].content)
+      searchResult.type = removeUnwantedCharactersFromText(locationDataList[3].content)
+      searchResult.municipality = removeUnwantedCharactersFromText(locationDataList[4].content)
+      searchResult.area = removeUnwantedCharactersFromText(locationDataList[5].content)
+      searchResult.country = removeUnwantedCharactersFromText(locationDataList[6].content)
+      searchResult.countryFlagImgSrc = String(locationDataList[6].childrenWithTagName("a")[0].childrenWithTagName("img")[0].attributes["src"]!)
       searchResults.append(searchResult)
     }
     return searchResults
+  }
+  
+  func removeUnwantedCharactersFromText(text: String) -> String {
+    var filteredText = text
+    filteredText = filteredText.stringByReplacingOccurrencesOfString("\r\n      ", withString: "")
+    filteredText = filteredText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+    return filteredText
   }
   
   private func parseJSON(data: NSData) -> [String: AnyObject]? {

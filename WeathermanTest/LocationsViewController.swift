@@ -172,15 +172,13 @@ extension LocationsViewController: UISearchResultsUpdating {
     guard let searchString = searchController.searchBar.text where searchController.searchBar.text != nil else {
       return
     }
-    if searchString == "Larkollen" {
-      search.performSearchForText(searchString, completion: { success in
-        if !success {
-          self.showNetworkError()
-        }
+    search.performSearchForText(searchString, completion: { success in
+      if !success {
+        self.showNetworkError()
+      }
         
-        self.tableView.reloadData()
-        self.searchController.searchBar.resignFirstResponder()
-      })
-    }
+      self.tableView.reloadData()
+      //self.searchController.searchBar.resignFirstResponder()
+    })
   }
 }

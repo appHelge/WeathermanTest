@@ -7,24 +7,38 @@
 //
 
 import Foundation
+import UIKit
 
 class LocationSearchResult {
+  var resultListIndex: String = ""
   var placeName: String = ""
   var type: String = ""
+  var elevation: String = ""
   var municipality: String = ""
   var area: String = ""
   var country: String = ""
   var url: String = ""
-  var resultDataDict = [String: String]()
-  var title: String {
-    var titleString: String = ""
-    for (index, value) in resultDataDict {
-      titleString += "\(index): \(value)"
+  var countryFlagImgSrc: String = ""
+  var countryFlagImagePath: String? {
+    guard countryFlagImgSrc != "" else {
+      return nil
     }
-    return titleString
+    return (countryFlagImgSrc as NSString).lastPathComponent
+    // http://fil.nrk.no/contentfile/web/icons/flags/h14/NO.png
+    
   }
-  var subtitle: String {
-    return "\(type), \(municipality), (\(area)), \(country)"
+  
+  var countryFlagImage: UIImage? {
+    guard countryFlagImagePath != nil, var flagPath = countryFlagImagePath else {
+      return nil
+    }
+    let fileManager = NSFileManager.defaultManager()
+    flagPath = (applicationDocumentsDirectory as NSString).stringByAppendingPathComponent(flagPath)
+    if fileManager.fileExistsAtPath(flagPath) {
+      return UIImage(named: flagPath)
+    } else {
+      return nil
+    }
   }
 }
 
